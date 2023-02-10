@@ -25,7 +25,7 @@ PONTUACAO_RISCO (PSR)     | É o somatório dos valores de risco de cada item do
 INDICE_CONFORMIDADE       | Porcentagem dos itens do roteiro de inspeção que foram atendidos pela embarcação
 TEMPORADA                 | Temporada do Programa Nacional de Vigilância em Saúde para Navios de Cruzeiros. As temporadas iniciam-se em outubro e prosseguem até o mês abril do ano seguinte
 
-´´´SQL
+``` SQL
 
 SELECT * FROM cap02.TB_NAVIOS;
 
@@ -54,7 +54,7 @@ SELECT nome_navio, classificacao_risco, pontuacao_risco, temporada
 FROM cap02.TB_NAVIOS 
 WHERE classificacao_risco = 'D' OR pontuacao_risco > 3000
 ORDER BY nome_navio
-´´´
+``` 
 
 
  
