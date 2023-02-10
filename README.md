@@ -25,6 +25,10 @@ PONTUACAO_RISCO (PSR)     | É o somatório dos valores de risco de cada item do
 INDICE_CONFORMIDADE       | Porcentagem dos itens do roteiro de inspeção que foram atendidos pela embarcação
 TEMPORADA                 | Temporada do Programa Nacional de Vigilância em Saúde para Navios de Cruzeiros. As temporadas iniciam-se em outubro e prosseguem até o mês abril do ano seguinte
 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+### Criando Tabela no MYSQL workbencch:
+
 ``` SQL
 CREATE TABLE `cap02`.`TB_NAVIOS` (
   `nome_navio` VARCHAR(50) NULL,
@@ -33,12 +37,21 @@ CREATE TABLE `cap02`.`TB_NAVIOS` (
   `indice_conformidade` VARCHAR(15) NULL,
   `pontuacao_risco` INT NULL,
   `temporada` VARCHAR(200) NULL);
-
+  
+  ``` 
+ ### Selecionando algumas tabelas:
+  
+``` SQL
 SELECT * FROM cap02.TB_NAVIOS;
 
 SELECT nome_navio, mes_ano FROM cap02.TB_NAVIOS;
 
 SELECT DISTINCT classificacao_risco FROM cap02.TB_NAVIOS;
+
+``` 
+### Usando WHERE AND ORDER BY
+
+``` SQL
 
 SELECT nome_navio, temporada FROM cap02.TB_NAVIOS WHERE classificacao_risco = 'D'
 
@@ -72,15 +85,18 @@ FROM cap02.TB_NAVIOS
 WHERE classificacao_risco IN ('A', 'B') AND indice_conformidade > 90
 ORDER BY indice_conformidade 
 LIMIT 10
+``` 
 
-# Em Abril de 2018 alguma embarcação teve índice de conformidade de 100% e pontuação de risco igual a 0?
-
+### Algunas perguntas:
+Em Abril de 2018 alguma embarcação teve índice de conformidade de 100% e pontuação de risco igual a 0?
+``` SQL
 SELECT nome_navio, classificacao_risco, indice_conformidade, pontuacao_risco, temporada 
 FROM cap02.TB_NAVIOS 
 WHERE indice_conformidade > 90 AND pontuacao_risco = 0 AND mes_ano = '04/2018'
 ORDER BY indice_conformidade 
-
-# Em Abril de 2018 alguma embarcação teve índice de conformidade de 100% e pontuação de risco igual a 0?
+```
+Em Abril de 2018 alguma embarcação teve índice de conformidade de 100% e pontuação de risco igual a 0?
+``` SQL
 
 SELECT nome_navio, classificacao_risco, indice_conformidade, pontuacao_risco, temporada 
 FROM cap02.TB_NAVIOS 
