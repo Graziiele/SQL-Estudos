@@ -1,3 +1,2 @@
-## Estudos de SQL (Junção de Tabelas)
-
+Conjunto de dados de demonstração de BI da Microsoft Contoso para o setor de varejo
 
