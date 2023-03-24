@@ -86,3 +86,29 @@ LEFT JOIN DimGeography
 ON DimStore.GeographyKey = DimGeography.GeographyKey
 
 ```
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+``` SQL
+
+/* Complementa a tabela DimProduct com a informação de
+ProductCategoryDescription. Utilize o LEFT JOIN e retorne em seu
+SELECT apenas as 2 colunas que considerar mais relevantes 
+
+*/
+
+SELECT * FROM DimProduct
+SELECT * FROM DimProductCategory
+
+SELECT
+	ProductName,
+	ProductCategoryDescription
+FROM 
+	DimProduct
+LEFT JOIN DimProductSubCategory
+	ON DimProduct.ProductSubcategoryKey = DimProductSubcategory.ProductSubcategoryKey 
+lEFT JOIN DimProductCategory
+	ON DimProductSubcategory.ProductCategoryKey = DimProductCategory.ProductCategoryKey
+	
+```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
