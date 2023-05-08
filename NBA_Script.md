@@ -1,3 +1,22 @@
+<div align="center">
+    
+![image](https://user-images.githubusercontent.com/114547875/236925249-1d9c14bd-43f1-43cd-af61-f8a3b3a02e05.png)
+    
+</div>
+
+## SQL + Visualização de dados
+
+Durante esse projeto, realizei um estudo em SQL com dados provenientes de um banco de dados proposto com dados da NBA. Para isso, carreguei os arquivos CSV no software DBeaver e conectei ao IP correspondente. Em seguida, elaborei as consultas a seguir para aprimorar minhas habilidades em SQL:
+
+- Cálculo do salário médio ao longo das seasons (1990-2018);
+- Obtenção da quantidade de jogadores com mais de 10 pontos de média na carreira;
+- Identificação do jogador com o salário mais alto em cada season (1990-2018);
+- Demonstração do custo acumulado ao longo dos anos (1990-2018) que os times Los Angeles Lakers, Toronto Raptors e Golden State Warriors tiveram com salário de jogadores.
+
+Adicionalmente, com os dados extraídos dessas consultas, criei um dashboard com o objetivo de apresentar visualmente as informações obtidas. Através desse dashboard, pude demonstrar de maneira clara e objetiva a análise feita em relação aos dados da NBA.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ``` SQL
 
 -- (1) Quantidade de jogadores com mais de 10 pontos de média (“career_PTS”) na carreira 
