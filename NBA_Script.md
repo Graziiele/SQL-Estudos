@@ -79,3 +79,7 @@ GROUP BY
     nba_salaries.season ASC;
     
  ```
+## Visualização de dados
+
+![DashSQL](https://user-images.githubusercontent.com/114547875/236927256-0558fd9d-64e7-4190-a7fd-d540aa951405.png)
+
